@@ -12,11 +12,15 @@
 }
 
 h1 {
-    margin-bottom: 1rem;
     font-size: 5.4rem;
     color: #56a5eb;
     margin-bottom: 5rem;
   }
+label{
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #56a5eb;
+}
   
   
   /*Utilities*/

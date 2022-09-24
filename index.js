@@ -1,13 +1,15 @@
 var timetxt = document.getElementById("time") ; 
 const startButton = document.getElementById("start-btn") ; 
 const title = document.getElementById("welcome") ; 
+const timeInput = document.getElementById("timeInput") ;
+const input = document.getElementById("input") ;
 const countAgain = document.getElementById("countAgain")
-const initialTime = 2 
+
+var initialTime
 var timeLeft
 function init(){
-     timeLeft= initialTime ; 
      countAgain.style.display= "none"
-     renderTime(timeLeft) 
+     //renderTime(timeLeft) 
 }
 
 function startCounting(){
@@ -19,7 +21,6 @@ function startCounting(){
     }
     else {
         countingDone() 
-       
     }
 }
 
@@ -32,7 +33,6 @@ function startCounting(){
 // })
 startButton.onclick = ()=>{
     startButtonClicked() ; 
-
 }
 countAgain.onclick= ()=>{
     init() 
@@ -40,25 +40,19 @@ countAgain.onclick= ()=>{
     
 }
 
-const startAgainButtonClicked=  ()=>{ 
-    
-    console.log(timetxt) 
-    title.style.display = "none"; 
-   countAgain.style.display = "none";
-    startCounting() 
-
-}
-
-const startButtonClicked=  ()=>{ 
-    console.log(timetxt) 
+const startButtonClicked=  ()=>{  
     title.style.display = "none"; 
     startButton.style.display = "none";
+    input.style.display = "none";
+    initialTime = timeInput.value
+    timeLeft = initialTime
+
     startCounting() 
- 
-    
 }
 function countingDone(){
     title.style.display = "block";
+    input.style.display = "flex";
+
     countAgain.style.display= "block" 
 }
 
