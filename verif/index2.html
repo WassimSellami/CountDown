@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down</title>
+    <link rel="stylesheet" href="index.css">
+    
+
+</head>
+<body>
+    <div class="container">
+        <div id="home" class="flex-center flex-column">
+            <h1  id="welcome" class="text-center">Welcome to Verification Website</h1>
+            <button id="start-btn" class="btn" >Send Code</button>
+            <button id = "send-again-btn" class="btn"> Send Again</button>
+            <form action="#" method="POST" id="form">
+                <div id="input" class="flex-center flex-column">
+                    <label for="code-input">Enter the sent code</label>
+                    <input type="number" name="codeInput" id="code-input" class="btn">
+                    <div id="time-left">
+                        <span>Please submit before: </span>
+                        <span id="time">00</span>
+                    </div>
+                    
+                </div>
+                <button id = "submit-btn" type="submit" class="btn">Submit</button>    
+            </form>
+        </div> 
+    </div>  
+    <script type="module" src="index.js"></script> 
+</body>
+</html>
